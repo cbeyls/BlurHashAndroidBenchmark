@@ -2,6 +2,7 @@ package com.wolt.blurhashkt
 
 import android.graphics.Bitmap
 import android.graphics.Color
+import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.pow
 import kotlin.math.withSign
@@ -110,7 +111,7 @@ object NewBlurHashDecoder {
     private fun createCosines(size: Int, numComp: Int) = FloatArray(size * numComp) { index ->
         val x = index / numComp
         val i = index % numComp
-        cos(Math.PI * x * i / size).toFloat()
+        cos(PI * x * i / size).toFloat()
     }
 
     private fun linearToSrgb(value: Float): Int {
