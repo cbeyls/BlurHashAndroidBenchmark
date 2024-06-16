@@ -1,0 +1,14 @@
+[versions]
+agp = "8.5.0"
+androidxBenchmark = "1.2.4"
+junitKtx = "1.1.5"
+kotlin = "2.0.0"
+
+[libraries]
+benchmark-junit = { group = "androidx.benchmark", name = "benchmark-junit4", version.ref = "androidxBenchmark" }
+junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+androidx-benchmark = { id = "androidx.benchmark", version.ref = "androidxBenchmark" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
