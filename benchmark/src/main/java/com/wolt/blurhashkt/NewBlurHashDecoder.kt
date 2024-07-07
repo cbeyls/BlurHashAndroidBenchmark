@@ -74,7 +74,7 @@ object NewBlurHashDecoder {
         outArray[outIndex + 2] = signedPow2((b - 9) / 9.0f) * maxAc
     }
 
-    private fun signedPow2(value: Float) = value.pow(2f).withSign(value)
+    private fun signedPow2(value: Float) = (value * value).withSign(value)
 
     private fun composeBitmap(
         width: Int, height: Int,
